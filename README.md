@@ -1,9 +1,9 @@
-WORK IN PROGRESS
+**WORK IN PROGRESS**
 
-INSTALL: 
+Install: 
 
 ```npm install render-media-query```
 
-EXAMPLE USAGE: 
+Example: 
 
-[Example.](example/)
+[Example](example/)
