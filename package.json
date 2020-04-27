@@ -1,0 +1,21 @@
+{
+  "name": "render-media-query",
+  "version": "0.0.2",
+  "description": "No more boilerplate for media queries",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JuanCarlosFrutos/render-media-query"
+  },
+  "scripts": {},
+  "keywords": [
+    "React",
+    "Hook",
+    "MediaQueries"
+  ],
+  "author": "JuanCarlosFrutos",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1"
+  }
+}
