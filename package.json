@@ -1,7 +1,7 @@
 {
   "name": "render-media-query",
-  "version": "0.0.3",
-  "description": "No more boilerplate for media queries",
+  "version": "0.0.4",
+  "description": "Develop responsive designs efficiently",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
   ],
   "author": "JuanCarlosFrutos",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
     "react": "^16.13.1"
   }
 }
