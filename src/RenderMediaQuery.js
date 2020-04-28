@@ -9,7 +9,7 @@ const RenderMediaQuery = ({ children, renderOn }) => {
 
   const mapQueryCallback = useMemo(() => (renderOn.map((queryString) => {
     return { mediaQuery: queryString, callback: handlerQueryUpdate }
-  })), renderOn[0])
+  })), [renderOn])
 
   useRenderMediaQuery(mapQueryCallback)
 

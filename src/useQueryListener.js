@@ -15,7 +15,7 @@ function useRenderMediaQuery(mapQueryCallback) {
     return function cleanup () {
       queries.map(({ query, callback }) => query.removeListener(callback))
     }
-  }, [mapQueryCallback[0].mediaQuery])
+  }, [mapQueryCallback])
 }
 
 export default useRenderMediaQuery
