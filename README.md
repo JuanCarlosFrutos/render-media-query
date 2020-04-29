@@ -12,9 +12,13 @@ screen size.
 
 ### Component
 
+```JSX
+    import { RenderMediaQuery } from 'render-media-query'
+```
+
 renderOn must be an array of [valid media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
 
-```
+```JSX
     <RenderMediaQuery renderOn={['(min-width: 1200px)']}>
         <div>Render screen min-width 1200px</div>
     </RenderMediaQuery>
@@ -25,9 +29,14 @@ Children of `RenderMediaQuery` will be desplayed only for screens with min-width
 
 ### Hook
 
+```JSX
+    import useRenderMediaQuery from 'render-media-query'
+```
+
+
 useRenderMediaQuery receives as argument an array: 
 
-```
+```JSX
     [
         { mediaQuery: '(min-width: 1200px)', callback: callbackLargeScreen },
         ...
@@ -37,7 +46,7 @@ useRenderMediaQuery receives as argument an array:
 `callbackLargeScreen` be called each time media query be triggered.
 Callback recives as param an [event](https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryListEvent)
 
-```
+```JSX
     const [large, setLarge] = useState(false)
     const [medium, setMedium] = useState(false)
 
