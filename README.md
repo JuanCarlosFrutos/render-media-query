@@ -1,10 +1,15 @@
+# Table of Contents
+- [Description](#Description)
+- [Usage](#Usage)
+- [Testing](#Testing)
+- [Example](#Example)
 
 ## Description
 
 This package allows you to render only those components that you need for that
 screen size.
 
-## Install: 
+### Install: 
 
 ```npm install render-media-query```
 
@@ -68,7 +73,31 @@ Callback recives as param an [event](https://developer.mozilla.org/en-US/docs/We
     )
 ```
 
+## Testing:
 
-### Real example: 
+If you have problems testing with Jest, [here is the solution](https://jestjs.io/docs/en/manual-mocks#mocking-methods-which-are-not-implemented-in-jsdom): 
+
+If you have a `setUpTest.js` you can put this code inside and forget about it.
+
+```javascript
+    global.window = Object.defineProperty(window, 'matchMedia', {
+        writable: true,
+        value: jest.fn().mockImplementation(query => ({
+            matches: false,
+            media: query,
+            onchange: null,
+            addListener: jest.fn(), // deprecated
+            removeListener: jest.fn(), // deprecated
+            addEventListener: jest.fn(),
+            removeEventListener: jest.fn(),
+            dispatchEvent: jest.fn()
+        }))
+    })
+```
+
+These package uses some methods witch are not implemented in JSOM.
+
+
+## Example: 
 
 [Example](example/src)
