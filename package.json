@@ -1,6 +1,6 @@
 {
   "name": "render-media-query",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Develop responsive designs efficiently",
   "main": "dist/index.js",
   "repository": {
@@ -25,7 +25,6 @@
     "babel-loader": "^8.1.0"
   },
   "peerDependencies": {
-    "prop-types": "^15.7.2",
     "react": "^16.8.0"
   },
   "dependencies": {}

@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react'
-import PropTypes from 'prop-types'
 import useRenderMediaQuery from './useQueryListener'
 
 const RenderMediaQuery = ({ children, renderOn }) => {
@@ -16,8 +15,4 @@ const RenderMediaQuery = ({ children, renderOn }) => {
   return show ? children : null
 }
 
-RenderMediaQuery.propTypes = {
-  children: PropTypes.node,
-  renderOn: PropTypes.array.isRequired
-}
 export default RenderMediaQuery
