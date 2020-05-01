@@ -7,8 +7,6 @@ exports["default"] = void 0;
 
 var _react = require("react");
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _useQueryListener = _interopRequireDefault(require("./useQueryListener"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -50,9 +48,5 @@ var RenderMediaQuery = function RenderMediaQuery(_ref) {
   return show ? children : null;
 };
 
-RenderMediaQuery.propTypes = {
-  children: _propTypes["default"].node,
-  renderOn: _propTypes["default"].array.isRequired
-};
 var _default = RenderMediaQuery;
 exports["default"] = _default;
