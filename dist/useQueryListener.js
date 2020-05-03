@@ -11,7 +11,7 @@ var queryListener = function queryListener(mapQueryCallback) {
   return mapQueryCallback.map(function (queryCallbackObj) {
     var query = window.matchMedia(queryCallbackObj.mediaQuery);
     queryCallbackObj.callback(query);
-    query.addListener(queryCallbackObj.callback);
+    query.addEventListener('change', queryCallbackObj.callback);
     return {
       query: query,
       callback: queryCallbackObj.callback
@@ -26,7 +26,7 @@ function useRenderMediaQuery(mapQueryCallback) {
       queries.map(function (_ref) {
         var query = _ref.query,
             callback = _ref.callback;
-        return query.removeListener(callback);
+        return query.removeEventListener('change', callback);
       });
     };
   }, [mapQueryCallback]);
